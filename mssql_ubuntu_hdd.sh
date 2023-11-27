@@ -3,7 +3,7 @@
 # Use the following variables to control your install:
 
 # Password for the SA user (required)
-MSSQL_SA_PASSWORD='Sf3-$huEwniK2hrtT'
+MSSQL_SA_PASSWORD='Sf3-$hKri0L#o0jKEJ'
 
 # Product ID of the version of SQL server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
@@ -132,8 +132,13 @@ chown -R mssql:mssql /var/opt/mssql/data_disk
 chown -R mssql:mssql /var/opt/mssql/log_disk
 chown -R mssql:mssql /var/opt/mssql/bkp_disk
 
-#Restart MSSQL
-echo Restartuji MSSQL....
+echo Zmena collation DB
+sudo systemctl stop mssql-server
+echo Pro Pohodu je potreba !!!czech_ci_as!!!
+printf 'czech_ci_as' | sudo /opt/mssql/bin/mssql-conf set-collation
+
+#Start MSSQL
+echo Startuji MSSQL....
 sudo systemctl start mssql-server
 
 
