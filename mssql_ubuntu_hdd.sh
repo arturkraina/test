@@ -91,9 +91,9 @@ vgcreate sql_data /dev/sdb
 vgcreate sql_log /dev/sdc
 vgcreate sql_bkp /dev/sdd
 
-lvcreate -l 100%FREE sql_bkp
 lvcreate -l 100%FREE sql_data
 lvcreate -l 100%FREE sql_log
+lvcreate -l 100%FREE sql_bkp
 
 mkfs.xfs -f /dev/sql_data/lvol0
 mkfs.xfs -f /dev/sql_log/lvol0
