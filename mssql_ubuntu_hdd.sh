@@ -3,7 +3,7 @@
 # Use the following variables to control your install:
 
 # Password for the SA user (required)
-MSSQL_SA_PASSWORD='Sf3-$hKri0L#o0jKEJ'
+MSSQL_SA_PASSWORD='SfwefEWFL#o0jKEJ'
 
 # Product ID of the version of SQL server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
@@ -90,6 +90,7 @@ pvcreate /dev/sdb /dev/sdc /dev/sdd
 vgcreate sql_data /dev/sdb
 vgcreate sql_log /dev/sdc
 vgcreate sql_bkp /dev/sdd
+
 lvcreate -l 100%FREE sql_bkp
 lvcreate -l 100%FREE sql_data
 lvcreate -l 100%FREE sql_log
