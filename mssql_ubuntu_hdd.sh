@@ -111,8 +111,8 @@ echo vkladam zaznam od discich do fstab.....
 
 cat <<EOF>> /etc/fstab
 
-/dev/mapper/sql_log-lvol0 /var/opt/mssql/data_disk xfs rw,attr2,noatime 0 0
-/dev/mapper/sql_data-lvol0 /var/opt/mssql/log_disk xfs rw,attr2,noatime 0 0
+/dev/mapper/sql_data-lvol0 /var/opt/mssql/data_disk xfs rw,attr2,noatime 0 0
+/dev/mapper/sql_log-lvol0 /var/opt/mssql/log_disk xfs rw,attr2,noatime 0 0
 /dev/mapper/sql_bkp-lvol0 /var/opt/mssql/bkp_disk xfs rw,attr2,noatime 0 0
 EOF
 
